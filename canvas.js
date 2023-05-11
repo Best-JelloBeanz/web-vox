@@ -1,4 +1,4 @@
-var canvas = document.getElementById("test-canvas");
+var canvas = document.getElementById("index");
 var context = canvas.getContext('2d');
 
 // source for this code: https://riptutorial.com/html5-canvas/example/11659/detecting-mouse-position-on-the-canvas
