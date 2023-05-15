@@ -10,14 +10,14 @@
 			}
 		</style>
 	</head>
-	<body onload="startGame()">
+	<body onload="startApp()">
 		<script>
 
-			function startGame() {
-				myGameArea.start();
+			function startApp() {
+				myAppArea.start();
 			}
 
-			var myGameArea = {
+			var myAppArea = {
 				canvas : document.createElement("canvas"),
 				start : function() {
 					this.canvas.width = 480;
@@ -29,7 +29,7 @@
 
 		</script>
 
-		<p>We have created a game area! (or at least an empty canvas)</p>
+		<p>We have created an area! (or at least an empty canvas)</p>
 
 	</body>
 </html>
