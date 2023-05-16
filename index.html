@@ -24,8 +24,8 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 680;
+        this.canvas.height = 570;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -54,35 +54,28 @@ function component(width, height, color, x, y, type) {
     }
     this.gamearea = myGameArea;
     this.width = width;
-    this.height = height;
-    this.speedX = 0;
-    this.speedY = 0;    
+    this.height = height;  
     this.x = x;
     this.y = y;    
     this.update = function() {
         ctx = myGameArea.context;
         if (type == "image") {
-            ctx.drawImage(this.image, 
-                this.x, 
-                this.y,
-                this.width, this.height);
+            ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         } else {
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
     this.newPos = function() {
-	if (myGameArea.keys && myGameArea.keys[37]) {this.x += -1; }
-    	if (myGameArea.keys && myGameArea.keys[39]) {this.x += 1; }
-    	if (myGameArea.keys && myGameArea.keys[38]) {this.y += -1; }
-    	if (myGameArea.keys && myGameArea.keys[40]) {this.y += 1; }
+	if (myGameArea.keys && myGameArea.keys[37]) {this.x += -2; }
+    	if (myGameArea.keys && myGameArea.keys[39]) {this.x += 2; }
+    	if (myGameArea.keys && myGameArea.keys[38]) {this.y += -2; }
+    	if (myGameArea.keys && myGameArea.keys[40]) {this.y += 2; }
     }    
 }
 
 function updateGameArea() {
-    myGameArea.clear();
-    myGamePiece.speedX = 0;
-    myGamePiece.speedY = 0;    
+    myGameArea.clear(); 
     myGamePiece.newPos();    
     myGamePiece.update();
 }
