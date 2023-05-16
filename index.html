@@ -2,6 +2,7 @@
 <!-- This is a comment -->
 <html>
 <head>
+	<title>Web-Vox</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
@@ -71,8 +72,10 @@ function component(width, height, color, x, y, type) {
         }
     }
     this.newPos = function() {
-        this.x += this.speedX;
-        this.y += this.speedY;        
+	if (myGameArea.keys && myGameArea.keys[37]) {this.x += -1; }
+    	if (myGameArea.keys && myGameArea.keys[39]) {this.x += 1; }
+    	if (myGameArea.keys && myGameArea.keys[38]) {this.y += -1; }
+    	if (myGameArea.keys && myGameArea.keys[40]) {this.y += 1; }
     }    
 }
 
@@ -80,10 +83,6 @@ function updateGameArea() {
     myGameArea.clear();
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;    
-    if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1; }
-    if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1; }
-    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -1; }
-    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 1; }
     myGamePiece.newPos();    
     myGamePiece.update();
 }
