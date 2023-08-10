@@ -13,7 +13,7 @@ function draw() {
 
 function animate() {
   window.requestAnimationFrame(animate)
-  c.clearRect(0, 0, canvas.width, canvas.height)
+  //c.clearRect(0, 0, canvas.width, canvas.height)
   c.fillStyle = 'white'
   c.fillRect(0, 0, canvas.width, canvas.height)
 
