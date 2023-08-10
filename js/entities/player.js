@@ -12,7 +12,7 @@ class Player {
   }
   draw() {
     c.fillStyle = 'red'
-    c.fillRect(this.x, this.y, this.width, this.height)
+    c.fillRect(this.position.x, this.position.y, this.width, this.height)
   }
   updatePos() {
   }
