@@ -7,8 +7,8 @@ canvas.height = 1024
 const player = new Player()
 
 function draw() {
-c.fillStyle = 'white'
-c.fillRect(0, 0, canvas.width, canvas.height)
+  c.fillStyle = 'white'
+  c.fillRect(0, 0, canvas.width, canvas.height)
 }
 
 function animate() {
