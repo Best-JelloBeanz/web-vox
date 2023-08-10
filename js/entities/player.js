@@ -1,9 +1,14 @@
 class Player {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
+  constructor() {
+    this.position = {
+      x: 100,
+      y: 100,
+    }
     this.width = 32
     this.height = 32
+    this.sides = {
+      bottom: this.position.y + this.height,
+    }
   }
   draw() {
     c.fillStyle = 'red'
