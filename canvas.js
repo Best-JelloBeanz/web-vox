@@ -4,7 +4,7 @@ const c = canvas.getContext('2d')
 canvas.width = 1024
 canvas.height = 1024
 
-const player = new Player()
+const player = new Player(100, 100)
 
 function draw() {
   c.fillStyle = 'white'
