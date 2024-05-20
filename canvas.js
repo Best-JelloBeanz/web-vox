@@ -7,6 +7,8 @@ canvas.height = 576
 //c.fillStyle = 'red'
 //c.fillRect(0, 0, canvas.width, canvas.height)
 
+const game = true
+
 const player = new Player()
 
 function animate() {
@@ -16,7 +18,7 @@ function animate() {
   player.draw()
 }
 
-while(true){
+while(game = true){
   animate()
 }
 
