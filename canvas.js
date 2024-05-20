@@ -15,5 +15,8 @@ function animate() {
   c.fillRect(0, 0, canvas.width, canvas.height)
   player.draw()
 }
-animate()
+
+while(true){
+  animate()
+}
 
